@@ -1,0 +1,119 @@
+GET http://localhost:8000
+
+### Registration
+POST http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    "username" : "Niranjan",
+    "email" : "nirya@gmail.com",
+    "password" : "12345"
+}
+
+
+### Login
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "email" : "pra@gmail.com",
+    "password" : "12345"
+}
+
+### user All deatils
+POST http://localhost:8000/auth/userDetails
+Content-Type: application/json
+
+{
+    "userid":"622b714a8d09e8435d2de5d0"
+}
+
+
+
+### Logout
+DELETE  http://localhost:8000/auth/logout
+
+
+### Refresh-Token
+POST http://localhost:8000/auth/refresh-token
+
+
+
+
+### all images  destails
+GET   http://localhost:8000/auth/all-images
+
+
+
+### same category
+GET http://localhost:8000/auth/same-category
+
+
+### same category
+GET http://localhost:8000/auth/categoryDates
+
+
+### search category
+POST http://localhost:8000/auth/search-category
+Content-Type: application/json
+
+{
+    "category" : "electronics"
+}
+
+### category wise images
+POST  http://localhost:8000/auth/category-wise-images
+Content-Type: application/json
+
+{
+    "category":"electronics"
+}
+
+
+
+
+
+### date wise images
+POST  http://localhost:8000/auth/date-wise-images
+Content-Type: application/json
+
+{
+    "postdate":"2022/03/15",
+    "category":"electronics"
+}
+
+
+### date wise distinct
+POST  http://localhost:8000/auth/distinct-date
+Content-Type: application/json
+
+{
+    "category":"electronics"
+}
+
+
+###
+GET http://localhost:8000/auth/date-wise-images
+
+
+### thumbnail images
+POST  http://localhost:8000/auth/thumbnail-category
+Content-Type: application/json
+
+{
+    "category":"electronics"
+}
+
+
+### search i,age by tag name
+POST  http://localhost:8000/auth/search-by-tag
+Content-Type: application/json
+
+{
+    "tag" : "nir"
+}
+
+
+### delete image from mongo and cloudinary
+
+DELETE http://localhost:8000/auth/6229ec368adeb951dcaadf95
